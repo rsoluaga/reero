@@ -1,25 +1,103 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 
-<style>
-    p{color:silver}
-</style>
+    <style>
+        body {
+            background-color: #1a1a1a; 
+            color: #bd33ff; 
+            font-family: 'Audiowide', cursive; 
+            margin: 0;
+            padding: 0;
+            display: flex; 
+            min-height: 100vh;
+        }
 
+        /* LEFT SIDE: The Photo Gallery Sidebar */
+        .photo-sidebar {
+            width: 350px; /* Widened to fit two columns of photos */
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* This creates the 2-column grid */
+            grid-auto-rows: min-content;
+            gap: 15px;
+            
+            /* The Neon Green Barrier */
+            border-right: 6px solid #39FF14;
+            box-shadow: 10px 0px 20px rgba(57, 255, 20, 0.2);
+            background-color: #111; /* Slightly darker to define the sidebar */
+        }
+
+        .side-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #bd33ff;
+            transition: transform 0.2s;
+        }
+
+        .side-image:hover {
+            transform: scale(1.05);
+            border-color: #39FF14; /* Border turns green when you hover! */
+        }
+
+        /* RIGHT SIDE: All the Text */
+        .text-content {
+            flex-grow: 1;
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 0 0 20px #bd33ff;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin: 30px 0 10px 0;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #39FF14;
+            margin-top: 0;
+        }
+    </style>
 </head>
 
 <body>
 
-<p>Welcome to my webpage!</p>
+    <div class="photo-sidebar">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/ginger-maine-coon-kitten-running-on-lawn-in-royalty-free-image-1719608142.jpg?crop=1xw:0.84415xh;0,0.185xh" class="side-image">
+        <img src="greens.jpg" class="side-image">
+        
+        <img src="trytry.jpg" class="side-image">
+        <img src="anyany.jpg" class="side-image">
+        
+        <img src="fashion.jpg" class="side-image">
+        <img src="logoff.jpg" class="side-image">
+        
+        <img src="faith.jpg" class="side-image">
+        <img src="easy.jpg" class="side-image">
+    </div>
 
-<style></style>
-<img src=https://hips.hearstapps.com/hmg-prod/images/ginger-maine-coon-kitten-running-on-lawn-in-royalty-free-image-1719608142.jpg?crop=1xw:0.84415xh;0,0.185xh
-width: 10%
-height: auto
-</style>
+    <div class="text-content">
+        <h1>wassup & welcome</h1>
+        <p>it's rio :p </p>
+        <p>and welcome to the inside of my brain</p>
+        <p>hoping that this quarter I learn, live and grow while being kind</p>
+        <p>that i practice being stern and commpassionate</p>
+        <p>and embrace the unknown!</p>
+    </div>
 
 </body>
-
 </html>
