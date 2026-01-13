@@ -8,7 +8,6 @@
     <style>
         body {
             background-color: #1a1a1a; 
-            color: #bd33ff; 
             font-family: 'Audiowide', cursive; 
             margin: 0;
             padding: 0;
@@ -18,17 +17,15 @@
 
         /* LEFT SIDE: The Photo Gallery Sidebar */
         .photo-sidebar {
-            width: 350px; /* Widened to fit two columns of photos */
+            width: 350px; 
             padding: 20px;
             display: grid;
-            grid-template-columns: 1fr 1fr; /* This creates the 2-column grid */
+            grid-template-columns: 1fr 1fr; 
             grid-auto-rows: min-content;
             gap: 15px;
-            
-            /* The Neon Green Barrier */
             border-right: 6px solid #39FF14;
             box-shadow: 10px 0px 20px rgba(57, 255, 20, 0.2);
-            background-color: #111; /* Slightly darker to define the sidebar */
+            background-color: #111; 
         }
 
         .side-image {
@@ -36,15 +33,9 @@
             height: auto;
             border-radius: 8px;
             border: 2px solid #bd33ff;
-            transition: transform 0.2s;
         }
 
-        .side-image:hover {
-            transform: scale(1.05);
-            border-color: #39FF14; /* Border turns green when you hover! */
-        }
-
-        /* RIGHT SIDE: All the Text */
+        /* RIGHT SIDE: Text Content Area */
         .text-content {
             flex-grow: 1;
             padding: 40px;
@@ -55,20 +46,39 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin: 0;
-            text-shadow: 0 0 20px #bd33ff;
+            color: #bd33ff; /* Keeping the Main Header Purple */
+            text-shadow: 0 0 15px rgba(189, 51, 255, 0.4);
         }
 
-        h2 {
-            font-size: 2.2rem;
-            margin: 30px 0 10px 0;
-            color: #ffffff;
+        /* METALLIC HOT PINK TEXT STYLING */
+        .metallic-pink {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            font-weight: bold;
+            text-transform: lowercase; /* Matches your "hi everyone" style */
+            
+            /* The Metallic Gradient Effect */
+            background: linear-gradient(
+                to bottom,
+                #ff00ff 0%,     /* Hot Pink */
+                #ff66ff 45%,    /* Light Highlight */
+                #cc00cc 55%,    /* Darker Shadow */
+                #ff00ff 100%    /* Hot Pink */
+            );
+            
+            /* This part "clips" the background color into the letters */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+            /* Adds a soft pink neon glow */
+            filter: drop-shadow(0px 0px 5px rgba(255, 0, 255, 0.5));
         }
 
-        p {
-            font-size: 1rem;
-            color: #39FF14;
+        .sub-text {
+            font-size: 1.0rem;
+            color: #39FF14; /* Keeping the neon green bottom text */
             margin-top: 0;
         }
     </style>
@@ -78,25 +88,21 @@
 
     <div class="photo-sidebar">
         <img src="https://hips.hearstapps.com/hmg-prod/images/ginger-maine-coon-kitten-running-on-lawn-in-royalty-free-image-1719608142.jpg?crop=1xw:0.84415xh;0,0.185xh" class="side-image">
-        <img src="websitepiccies/greens.jpg" class="side-image">
-        
-        <img src="websitepiccies/trytry.jpg" class="side-image">
         <img src="websitepiccies/anyany.jpg" class="side-image">
-        
+        <img src="websitepiccies/blackpanther.jpg" class="side-image">
+        <img src="websitepiccies/easy.jpg" class="side-image">
+        <img src="websitepiccies/faith.jpg" class="side-image">
         <img src="websitepiccies/fashion.jpg" class="side-image">
         <img src="websitepiccies/logoff.jpg" class="side-image">
-        
-        <img src="websitepiccies/faith.jpg" class="side-image">
-        <img src="websitepiccies/easy.jpg" class="side-image">
+        <img src="websitepiccies/trytry.jpg" class="side-image">
     </div>
 
     <div class="text-content">
         <h1>wassup & welcome</h1>
-        <p>it's rio :p </p>
-        <p>and welcome to the inside of my brain</p>
-        <p>hoping that this quarter I learn, live and grow while being kind</p>
-        <p>that i practice being stern and commpassionate</p>
-        <p>and embrace the unknown!</p>
+        <h2 class="metallic-pink">hi it's rio</h2>
+        <p class="sub-text">hoping that this quarter I learn,
+        <p class="sub-text">that i practice being stern and commpassionate
+        <p class="sub-text">and embrace the unknown!</p>
     </div>
 
 </body>
